@@ -116,6 +116,8 @@ namespace RestaurantWebsite.Controllers
             foreach (CartItem item in cart.cartItems)
             {
                 totalPrice += (item.Item.Price * item.Quantity);
+                OrderItem orderItem = new OrderItem { ItemName = item.Item.Name, Quantity = item.Quantity };
+                order.OrderItems.Add(orderItem);
             }
 
             order.TotalPrice = totalPrice;

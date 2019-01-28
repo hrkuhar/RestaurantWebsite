@@ -24,7 +24,15 @@ namespace RestaurantWebsite.Services
 
         public IEnumerable<Order> GetOrders()
         {
+            IEnumerable<Order> orders = context.Orders.ToList();
+            foreach (var item in orders)
+            {
+                item.OrderItems = context.OrderItems.Where(o => o.OrderId == item.Id).ToList();
+            }
+
             return context.Orders.ToList();
+
+
         }
     }
 }

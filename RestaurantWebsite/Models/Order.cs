@@ -14,5 +14,6 @@ namespace RestaurantWebsite.Models
         public int Number { get; set; }
         public DateTime Time { get; set; }
         public double TotalPrice { get; set; }
+        public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     }
 }

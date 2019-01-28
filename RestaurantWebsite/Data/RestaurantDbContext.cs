@@ -15,6 +15,6 @@ namespace RestaurantWebsite.Data
 
         public virtual DbSet<MenuItem> MenuItems { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<CartItem> CartItems { get; set; }
+        public virtual DbSet<OrderItem> OrderItems { get; set; }
     }
 }

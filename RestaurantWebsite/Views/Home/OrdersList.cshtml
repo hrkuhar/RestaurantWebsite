@@ -1,32 +1,31 @@
 ﻿@model IEnumerable<Order>
 
 
+@foreach (var item in Model)
+{
+    <p>Order Id: @item.Id</p>
+    <p>Name: @item.Name</p>
+    <p>Street: @item.Street @item.Number</p>
+    <p>Time: @item.Time</p>
+    <p>Total Price: @item.TotalPrice</p>
+    <br />
+    <p>Dishes: </p>
+    @foreach (var dish in item.OrderItems)
+    {
+        <p>@dish.ItemName @dish.Quantity</p>
+    }
+    <br />
+    <br />
+    <br />
 
-<table class="table table-dark">
-    <thead>
-        <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">Time</th>
-            <th scope="col">Price</th>
-        </tr>
-    </thead>
-    <tbody>
+}
 
-        @foreach (var item in Model)
-        {
-        <tr>
-            <td>@item.Id</td>
-            <td>@item.Name</td>
-            <td>@item.Street @item.Number</td>
-            <td>@item.Time</td>
-            <td>@item.TotalPrice</td>
-        </tr>
-        }
-    </tbody>
-</table>
 <br />
 
 
 <a asp-action="Menu">Back</a>
+
+
+
+<br />
+<br />
