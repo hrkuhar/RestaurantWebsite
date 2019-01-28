@@ -1,0 +1,17 @@
+﻿@model Order
+
+
+<p>Checkout succesful!</p>
+<br />
+<div>
+    <p>Name: @Model.Name</p>
+    <br />
+    <p>Address: @Model.Street @Model.Number</p>
+    <br />
+    <p>Time: @Model.Time</p>
+    <br />
+    <p>Total Price: @Model.TotalPrice</p>
+</div>
+
+<br />
+<a asp-action="ClearCart">Done</a>

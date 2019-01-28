@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MenuItem>
+
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Price</td>
+                <td>
+                    <a asp-action="AddToCart" asp-route-dishId="@item.Id">Add to Cart</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <a class="btn-primary btn" asp-action="Index">Home</a>

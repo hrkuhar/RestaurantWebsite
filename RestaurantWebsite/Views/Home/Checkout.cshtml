@@ -1,0 +1,19 @@
+﻿@model Order
+
+
+<form asp-action="ProcessCheckout" method="post">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input asp-for="Name" type="text" class="form-control" id="name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+        <label for="address">Address</label>
+        <input asp-for="Street" type="text" class="form-control" id="address" placeholder="Enter address">
+    </div>
+    <div class="form-group">
+        <label for="number">House number</label>
+        <input asp-for="Number" type="number" class="form-control" id="number" placeholder="Enter house number">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-action="Menu">Cancel</a>
+</form>
