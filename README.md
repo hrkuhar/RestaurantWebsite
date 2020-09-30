@@ -1,4 +1,4 @@
-# RestaurantWebsite
+### Restaurant Website
 
 - web aplikacija koja omogućuje narudžbu artikala s menija restorana
 - sastoji se od 4 osnovna dijela - početna stranica, meni, popis narudžbi i posebna stranica za administratore
